@@ -1,0 +1,16 @@
+define user express greeting
+  - "hello"
+  - "hi"
+  - "வணக்கம்"
+
+define bot express greeting
+  - "Hello! Welcome to the Tamil Nadu Government Schemes AI Assistant. How can I help you today?"
+  - "வணக்கம்! தமிழ்நாடு அரசுத் திட்டங்கள் உதவி மையத்திற்கு உங்களை வரவேற்கிறேன். நான் உங்களுக்கு எப்படி உதவ முடியும்?"
+
+define sub user check input
+  - condition: "The user query is completely unrelated to Tamil Nadu government schemes, welfare programs, subsidies, or public administration."
+  - execute: self_check_input
+
+define bot refuse response
+  - "I am specialized only in Tamil Nadu Government Schemes and welfare information. Please ask a relevant question."
+  - "நான் தமிழ்நாடு அரசுத் திட்டங்கள் மற்றும் நலத்திட்டங்கள் பற்றிய தகவல்களுக்கு மட்டுமே பதிலளிக்க முடியும். தொடர்புடைய கேள்வியைக் கேட்கவும்."
